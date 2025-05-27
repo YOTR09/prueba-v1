@@ -4,7 +4,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/")
+    fetch("http://localhost:8081/")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Error en la respuesta de la API");
