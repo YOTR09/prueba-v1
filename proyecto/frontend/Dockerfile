@@ -1,5 +1,5 @@
 # Etapa 1: build
-FROM node:22
+FROM node:20
 
 WORKDIR /app
 
@@ -11,4 +11,6 @@ COPY ./src ./
 
 ENV PORT=8080
 
-CMD [ "npm", "start" ]
+EXPOSE 8080
+
+CMD ["npm", "run", "dev"]

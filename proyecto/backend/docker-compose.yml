@@ -1,7 +1,7 @@
-version: '3.8'
+version: '3.9'
 
 services:
-  backend:
+  fast:
     build:
       context: .
       dockerfile: Dockerfile  
@@ -11,6 +11,4 @@ services:
       - ./src:/app
     environment:
       - ENVIRONMENT=development
-    comannd: uvicorn src.main:app --host 0.0.0.0  --port 8080 --reload
-
-    
+    command: uvicorn main:app --host 0.0.0.0 --port 8080 --reload
