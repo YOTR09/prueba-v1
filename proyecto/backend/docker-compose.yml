@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./src:/app
+    environment:
+      - ENVIRONMENT=development
+    comannd: uvicorn src.main:app --host 0.0.0.0  --port 8080 --reload
+
+    
