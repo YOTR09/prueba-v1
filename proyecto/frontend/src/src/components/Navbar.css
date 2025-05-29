@@ -1,0 +1,86 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espaciado entre los elementos izquierdo y derecho */
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+  width: 100%; /* Asegura que la barra ocupe todo el ancho de la página */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaciado entre los elementos */
+}
+
+.dark-mode-toggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #0056b3;
+}
+
+.login-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #218838;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: #444;
+  border-color: #555;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #ffc107;
+  color: black;
+}
+
+body.dark-mode .login-button {
+  background-color: #ffc107;
+  color: black;
+}

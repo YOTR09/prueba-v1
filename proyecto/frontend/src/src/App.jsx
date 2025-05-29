@@ -1,5 +1,8 @@
 // Importamos React y los hooks useEffect y useState para manejar el estado y los efectos secundarios
 import React, { useEffect, useState } from "react";
+import Sidebar from "./components/Sidebar"; // Importamos el componente de la barra lateral
+import Navbar from "./components/Navbar"; // Importamos el componente de la barra de navegación
+import Dashboard from "./components/Dashboard"; // Importamos el Dashboard
 
 function App() {
   // Definimos un estado llamado "message" para almacenar el mensaje recibido de la API
@@ -28,10 +31,15 @@ function App() {
 
   return (
     // Renderizamos el contenido del componente
-    <div style={{ padding: "2rem", fontFamily: "Arial, sans-serif" }}>
-      <h1>Mensaje desde API FastAPI:</h1>
-      {/* Mostramos el mensaje recibido o un texto de "Cargando..." mientras esperamos */}
-      <p>{message || "Cargando..."}</p>
+    <div>
+      {/* Barra de navegación */}
+      <Navbar />
+      <div style={{ display: "flex", marginTop: "4rem", overflowX: "hidden" }}>
+        {/* Barra lateral */}
+        <Sidebar />
+        {/* Contenido principal */}
+        <Dashboard />
+      </div>
     </div>
   );
 }
