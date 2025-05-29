@@ -40,6 +40,10 @@ function App() {
         {/* Contenido principal */}
         <Dashboard />
       </div>
+      {/* Mostrar el mensaje recibido de la API */}
+      <div style={{ padding: "1rem" }}>
+        <strong>Mensaje de la API:</strong> {message}
+      </div>
     </div>
   );
 }
